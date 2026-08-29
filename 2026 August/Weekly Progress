@@ -6,3 +6,5 @@ Explored music21's built-in corpus for Baroque, Classical, and Early Romantic re
 Lesson learned: searching with a field restriction, corpus.search(name, field='composer'), produces severe false negatives -- a search for "Haydn" returned zero results this way, even though Haydn works are present in the corpus. Switching to an unrestricted full-text search, corpus.search(name), found them, but introduces false positives instead (e.g. a search for "Weber" matched an unrelated folk-tune collection). Every hit has to be opened and manually checked for genre/content before use -- result counts alone are not reliable.
 
 Found and adopted the OpenScore String Quartets project as a second source: 122 string quartets, CC0-licensed MusicXML, transcribed from IMSLP public-domain scores and peer-reviewed. This source covers the Classical-to-early-20th-century range but does not cover the Baroque period, since the string quartet as a genre had not yet matured that early -- a limitation that persists through Week 4 and is still open.
+
+Result: an initial 8-work pilot (Haydn, Mozart, Beethoven, 1762-1826) to validate the pipeline before scaling up.
